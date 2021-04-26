@@ -52,20 +52,8 @@ class _FoodAppPageState extends State<FoodAppPage> {
         child: Center(
           child: Column(
             children: <Widget>[
-              Container(
-                margin: EdgeInsets.all(0),
-                child: Align(
-                  alignment: FractionalOffset.bottomCenter,
-                  child: Text("${widget.number}",
-                       style: GoogleFonts.pridi(
-                    fontSize: 24,
-                    color: Colors.black, 
-                     fontWeight: FontWeight.w300,),
-                  ),
-                ),
-              ),
               SizedBox(
-                height: 0,
+                height: 10,
               ),
               Card(
                 child: Image.network('${widget.img}'),
