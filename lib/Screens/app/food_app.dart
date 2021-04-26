@@ -72,7 +72,7 @@ class _FoodAppPageState extends State<FoodAppPage> {
                 semanticContainer: true,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0)),
+                    borderRadius: BorderRadius.circular(40.0)),
                 margin: EdgeInsets.all(0),
               ),
               SizedBox(
