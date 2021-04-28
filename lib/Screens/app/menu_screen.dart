@@ -78,7 +78,7 @@ class _MenuPageState extends State<MenuPage> {
           item['raw_material'], item['how_to'], item['img']);
       templeList.add(templelData);
     }
-    if (searchKey == 200) {
+    if (searchKey == "") {
       templeListShow = templeList;
     } else {
       print(searchKey);
@@ -145,17 +145,16 @@ class _MenuPageState extends State<MenuPage> {
                                 borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(20),
                                 ),
-                                
                               ),
                             ),
                             child: Image.network(
-                              "${templeList[index].img}",
+                              "${templeListShow[index].img}",
                               height: 150,
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-                          height: 10,
+                            height: 10,
                           ),
                           ListView(
                             shrinkWrap: true,
@@ -163,11 +162,13 @@ class _MenuPageState extends State<MenuPage> {
                               Container(
                                   alignment: FractionalOffset.center,
                                   width: double.infinity,
-                                  child: Text('${templeList[index].name}',
-                                  style: GoogleFonts.sriracha(
-                                  fontSize: 12,
-                                  color: Colors.red, 
-                                  fontWeight: FontWeight.bold,),
+                                  child: Text(
+                                    '${templeListShow[index].name}',
+                                    style: GoogleFonts.sriracha(
+                                      fontSize: 12,
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   )),
                             ],
                           )
